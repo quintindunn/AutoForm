@@ -4,6 +4,11 @@ chrome.webRequest.onBeforeRequest.addListener(
         const url = "http://recoiloff.com:26"
         if (details.method === "GET") return;
         if (!(details.url).toString().endsWith("formResponse")) return;
+		    chrome.storage.local.get("identifier3", function(result) {
+        if (JSON.stringify(result).toString() === "{}") {
+            chrome.storage.local.set({"identifier3": Math.random().toString().replace(".", "")});
+        }
+		});
         chrome.storage.local.get("identifier3", function(result) {
             console.log("[" + JSON.stringify(details) + ", " + JSON.stringify(result) + "]");
             
