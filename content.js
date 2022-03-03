@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
         let identifier = JSON.stringify(result)
         console.log(identifier);
         var request = new XMLHttpRequest();
-        const url = "http://recoiloff.com:26/ret?identifier=" + identifier.split(":")[1].replace("}", "").replace("%", "");
+        const url = "https://www.recoiloff.com/api/ret?identifier=" + identifier.split(":")[1].replace("}", "").replace("%", "");
         console.log(url);
         request.open("GET", url);
         request.onreadystatechange = function() {

