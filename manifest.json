@@ -1,6 +1,6 @@
 {    "manifest_version": 3,
     "name": "FormFill",
-    "version": "0.0.1",
+    "version": "0.1",
     "description": "Refill Google Form",
     "action": {
         "default_title": "Form Filler",
@@ -15,12 +15,15 @@
     "background": {
         "service_worker": "background.js"
     },
-    "offline_enabled": true,
+    "offline_enabled": false,
     "permissions": [
         "webRequest",
         "storage"
 
     ],
+    "icons": {
+    "512": "512x512.png"
+    },
 	"host_permissions": [
 		"https://docs.google.com/*",
         "https://forms.gle/*",

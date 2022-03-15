@@ -3,22 +3,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Filler</title>
     <script src="content.js"></script>
     <style>
         body{
-            padding: 20px;
+            background-color: rgb(245, 245, 245);
+            padding: 10px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+        }
+        .data-box {
+            padding-right: 20px;
+            background-color: rgb(236, 236, 236);
+        }
+        .button {
+            margin-left: 8vw;
+            background-color: #87c289;
+            border: 1px solid #7baf7d;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 70vw;
+
+        }
+        .input[type=text] {
+            margin-left: 8vw;
+            background-color: #87c289;
+            border: 1px solid #7baf7d;
+            color: white;
+            width: 70vw;
+
         }
     </style>
 </head>
 <body>
-    <nobr>
-        <h1>Form-Filler</h1>
-    </nobr>
-    <center>
-        <button id="url_small" class="">No form found yet :(</button>
-    </center>
-    <a href="" id="copytext" class=""></a>
+    <a style="display: none;margin: 0;padding: 0;" href="none://none" hidden id="copytext" class=""></a>
 
+    <div class="data-box">
+        <h1 style="margin-left: 2vw; padding-bottom: 0; margin-bottom: 1vh;">Refill Form:</h1>
+        <button id="url_small" class="button">No submissions yet!</button>
+        <h4 id="forcp" style="margin-left: 8vw; padding-bottom: 0; margin-bottom: 1vh;">For copy & paste</h4>
+        <input class="input" type=text id="cap" readonly="readonly"><br>
+    </div>
 </body>
 </html>
